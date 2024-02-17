@@ -6,7 +6,10 @@ This repository contains a simplified single-cell RNA sequencing (scRNA-seq) dat
 
 Single-cell RNA sequencing (scRNA-seq) provides a detailed view of the cellular composition of tissues, allowing for the exploration of cellular diversity and function at an unprecedented resolution. The processing of scRNA-seq data involves several key steps:
 
-1. **Quality Control**: Initial assessment and cleaning of raw sequencing data.
+<img width="1082" alt="image" src="https://github.com/Leila-Bagha/scRNA-seq/assets/86646216/0310beda-b969-4de6-b995-b10fb58b62a2">
+
+
+1. **Cleaning Raw Data**: Initial assessment and cleaning of raw sequencing data.
 2. **Read Mapping**: Alignment of sequencing reads to a reference genome.
 3. **Quality Control of Aligned Reads**: Filtering of aligned reads based on quality.
 4. **Quantification of Gene Expression**: Counting the number of reads/UMIs mapped to each gene.
