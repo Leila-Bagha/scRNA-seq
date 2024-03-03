@@ -1,57 +1,71 @@
-# Single-Cell RNA-Seq Data Processing Pipeline
-
-This repository contains a simplified single-cell RNA sequencing (scRNA-seq) data processing pipeline. It's designed to illustrate the basic steps involved in processing scRNA-seq data, from quality control to clustering and visualization, using a mock dataset. This project serves as a conceptual and practical introduction to scRNA-seq analysis.
+# Spatial Data Analysis with Squidpy: Z-Stacks in Mouse Brain Sagittal Slices
 
 ## Overview
 
-Single-cell RNA sequencing (scRNA-seq) provides a detailed view of the cellular composition of tissues, allowing for the exploration of cellular diversity and function at an unprecedented resolution. The processing of scRNA-seq data involves several key steps:
+This repository contains a Jupyter notebook that demonstrates the application of z-stacks within the Squidpy framework for spatial single-cell analysis. The project focuses on the analysis of Visium 10x mouse brain sagittal slices, showcasing techniques for handling, processing, visualizing, and analyzing spatial single-cell data.
 
-<img width="1082" alt="image" src="https://github.com/Leila-Bagha/scRNA-seq/assets/86646216/0310beda-b969-4de6-b995-b10fb58b62a2">
+## Objectives
 
+- To demonstrate the loading and preparation of spatial single-cell dataset examples.
+- To illustrate the concatenation and analysis of z-stack data using Squidpy.
+- To showcase various visualization techniques for spatial data analysis.
+- To highlight the processing and segmentation capabilities of Squidpy for spatial datasets.
+- To demonstrate feature calculation on z-stack images and their integration with spatial single-cell data.
 
-1. **Cleaning Raw Data**: Initial assessment and cleaning of raw sequencing data.
-2. **Read Mapping**: Alignment of sequencing reads to a reference genome.
-3. **Quality Control of Aligned Reads**: Filtering of aligned reads based on quality.
-4. **Quantification of Gene Expression**: Counting the number of reads/UMIs mapped to each gene.
-5. **Normalization**: Adjusting expression counts to account for sequencing depth and other technical factors.
-6. **Identification of Highly Variable Genes**: Selecting genes with significant variation across cells for further analysis.
-7. **Dimensionality Reduction**: Reducing the dataset to a lower-dimensional space for visualization and clustering.
-8. **Clustering**: Grouping cells based on similarity in gene expression profiles.
-9. **Differential Expression Analysis**: Identifying genes that are differentially expressed between defined cell groups.
-10. **Annotation and Interpretation**: Assigning cell type identities to clusters and interpreting the biological significance of findings.
+## Installation
 
-## Implementation
+To run the notebook in this repository, you will need to have Python installed on your system, along with Jupyter Notebooks or JupyterLab. The following libraries are also required:
 
-This project uses Python to simulate a subset of these steps on a mock scRNA-seq dataset:
+- Anndata
+- Scanpy
+- Squidpy
 
-- **Mock Data Creation**: Generates a small dataset to mimic gene expression data.
-- **Basic Quality Control**: Filters out lowly expressed genes.
-- **Normalization**: Scales the data to make it comparable across cells.
-- **Highly Variable Genes Identification**: Identifies genes with high variability across the dataset.
-- **Dimensionality Reduction and Clustering**: Uses PCA and k-means clustering to group cells based on gene expression.
-- **Visualization**: Visualizes the results of dimensionality reduction and clustering.
+You can install these libraries using pip:
 
-### Prerequisites
-
-- Python 3
-- Libraries: pandas, numpy, scikit-learn, matplotlib
-
-### Running the Pipeline
-
-```python
-# See included Python scripts or Jupyter notebooks for step-by-step execution
+```bash
+pip install anndata scanpy squidpy
 ```
 
-## Results
+## Running the Notebook
 
-The pipeline outputs a PCA plot with cells colored by their assigned cluster, demonstrating the potential to distinguish cellular populations based on gene expression patterns, even in a highly simplified context.
+1. Clone this repository to your local machine using Git:
 
-## Limitations and Real-World Application
+```bash
+git clone [URL to this repository]
+```
 
-This simplified pipeline is intended for educational purposes and to provide a framework for discussion. Real-world scRNA-seq data analysis requires more sophisticated methods and computational resources to handle the complexity and scale of the data.
+2. Navigate to the repository directory:
 
-For a comprehensive analysis, researchers would employ specialized bioinformatics tools and software, addressing challenges such as data sparsity, batch effects, and the identification of rare cell populations.
+```bash
+cd [repository name]
+```
 
-## Conclusion
+3. Start JupyterLab or Jupyter Notebook:
 
-Through this project, we aim to demystify the initial steps of scRNA-seq data analysis and provide a hands-on experience with processing such data. This pipeline serves as a starting point for those interested in the field of single-cell genomics.
+```bash
+jupyter lab
+```
+or
+```bash
+jupyter notebook
+```
+
+4. Open the `Spatial_Data_Analysis_with_Squidpy.ipynb` notebook and run the cells sequentially to replicate the analysis.
+
+## Key Findings and Visualizations
+
+This project demonstrates the power of spatial single-cell analysis to uncover insights into tissue organization and cellular interactions. Through the application of z-stacks, we explore spatial cellular data in three dimensions, providing a deeper understanding of the cellular composition and heterogeneity within mouse brain sagittal slices.
+
+The repository includes various visualization techniques, from static plots to interactive visualizations, allowing for an in-depth exploration of the spatial relationships within the dataset.
+
+## Contributing
+
+Your contributions are welcome! If you have suggestions for improving the analysis or encounter any issues, please feel free to open an issue or submit a pull request.
+
+## License
+
+This project is open-sourced under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+This project was inspired by tutorials and documentation provided by the Squidpy and Scanpy teams. Special thanks to the developers and contributors of these tools for making advanced spatial data analysis accessible to the broader scientific community.
