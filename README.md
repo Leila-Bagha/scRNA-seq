@@ -50,7 +50,7 @@ or
 jupyter notebook
 ```
 
-4. Open the `Spatial_Data_Analysis_with_Squidpy.ipynb` notebook and run the cells sequentially to replicate the analysis.
+4. Open the `zstacks.ipynb` notebook and run the cells sequentially to replicate the analysis.
 
 ## Key Findings and Visualizations
 
